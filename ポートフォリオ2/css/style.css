@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+
+
+/* ローティング仕様 ここから*/
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;    
+    bottom: 0;
+    right: 0;
+    background: #007AB7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#loadingBox p {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+}   
+
+
+  @keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1; 
+    }
+
+    80% {
+      opacity: 1; 
+  }
+    100% {
+        opacity: 0;
+    }
+  }
+
+  .animationLoading {
+    animation: fadeInOut 3s ease;
+  }
+
+
+
+/* ローティング仕様 ここまで*/
+
+body {
+    background-image: url('../images/backgroundImg_Sea.jpg'); 
+    background-size: cover;
+    background-position: center; /* 画像の中央に配置 */
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* 画面全体の高さに合わせる */
+    background-size: cover; /* 画像を全体に表示 */
+    background-position: center; /* 画像の中央に配置 */
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap: wrap;
+  }
+  
+  
+  .message {
+    width: 45%; /* コンテナの幅の約半分 */
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    text-align: center;
+    font-size:50px;
+    background-image: url(../images/fukidasi-9984-02.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 200px;
+  }
+  
+  .top-right {
+    align-self: flex-start;
+    justify-self: flex-end;
+
+  }
+  
+  .bottom-right {
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+  
+  .top-left {
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+  
+  .bottom-left {
+    align-self: flex-end;
+    justify-self: flex-start;
+  }
