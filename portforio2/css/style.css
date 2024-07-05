@@ -1,10 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-
-
+@charset "utf-8";
 
 /* ローティング仕様 ここから*/
 
@@ -52,72 +46,87 @@ body {
 
 /* ローティング仕様 ここまで*/
 
+body {
+  /* ページ全体に広がる背景画像を設定 */
+  background-image: url(../images/backgroundImg_Sea.jpg);
+  background-position: 50% 25%;
+  background-size: 2100px 1200px;
+  font-family: "Margarine", sans-serif;
+  
 
-.container {
-    background-image: url('../images/backgroundImg_Sea.jpg'); 
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120vh;
-    background-size: cover; /* 画像を全体に表示 */
-    background-position: center; /* 画像の中央に配置 */
-    display: flex;
-    justify-content: space-between;
-    align-items: space-between;
-    flex-wrap: wrap;
 }
 
-footer {
-    text-align: center;
-    background-color: #1797ec;
-    color: #fff;
-    padding: 10px 0;
-    bottom: 0;
+
+
+.footer {
+    position: relative;
+    top: 800px;
+    right: 30px;
+    text-align: right;
+    color: #000000;
     width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Margarine", sans-serif;
 }
 
-  
-  
-  .message {
-    box-sizing: border-box;
-    margin-left: 50px;
-    /* text-align: center; */
-    font-size: 100px;
-    background-image: url(../images/fukidasi-9984-02.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    right: 200px;
-  }
-  
-  .top-right {
-    align-self: flex-start;
-    justify-self: flex-end;
-    position: relative;
-    top: 180px;
-    left: 200px;
+.message {
+  box-sizing: border-box;
+  font-size: 80px;
+  background-image: url(../images/fukidasi-9984-02.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute; /* 絶対位置指定 */
+  width: 450px; /* メッセージボックスの幅 */
+  height: 200px; /* メッセージボックスの高さ */
+  padding: 20px; /* テキストとボックスの余白 */
+  display: flex;
+  justify-content: center; /* 水平方向の中央寄せ */
+  align-items: center; /* 垂直方向の中央寄せ */
+  font-family: "Margarine", sans-serif;
+}
 
+.top-right {
+  top: 80px; /* 上からの距離 */
+  left: 300px; /* 右からの距離を調整（例えば、40px） */
+}  
+
+
+.top-right a  {
+  top: 80px; /* 上からの距離 */
+  left: 300px; /* 右からの距離を調整（例えば、40px） */
+  font-family: "Margarine", sans-serif;
+}  
+
+
+.bottom-right {
+  bottom: 250px; /* 下からの距離 */
+  left: 500px; /* 右からの距離 */
+}
+
+.top-left {
+  top: 150px; /* 上からの距離 */
+  right: 500px; /* 左からの距離 */
+}
+
+.bottom-left {
+  bottom: 200px; /* 下からの距離 */
+  right: 350px; /* 左からの距離 */
+  font-family: "Margarine", sans-serif;
+}
+ 
+
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(../images/Untitled\ design2.png);
+    background-position: left;
+    background-size: 100% 50vh; /* 幅50%、高さ75%に縮小 */
+    background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
+    max-width: 100%;
   }
+
+
   
-  .bottom-right {
-    align-self: flex-end;
-    justify-self: flex-end;
-    position: relative;
-    bottom: 380px;
-    right: 50px;
-  }
-  
-  .top-left {
-    align-self: flex-start;
-    justify-self: flex-start;
-    position: relative;
-    top: 240px;
-    left: 50px;
-  }
-  
-  .bottom-left {
-    align-self: flex-end;
-    justify-self: flex-start;
-    position: relative;
-    bottom: 250px;
-    right: 380px;
-  }
+
+}
